@@ -4,3 +4,4 @@
 *.classpath
 *.project
 .rebel.xml.bak
+.idea
