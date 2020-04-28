@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    #test
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/adapter_test?characterEncoding=utf-8
+    username: root
+    password: 123456
+
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+#prod
+baidu-base-url: https://e.baidu.com
+sogou-base-url: https://auth.p4p.sogou.com
+sm-base-url: https://e.sm.cn
+qihoo-base-url: https://e.360.cn
+
+url:
+  baidu:
+    get_account_url: ${baidu-base-url}/api/account/getAccountInfo
+  sougou:
+    get_account_url: ${sogou-base-url}/api/account/getAccount
+  sm:
+    get_account_url: ${sm-base-url}/api/account/getAccount
+  qihoo:
+    get_account_url: ${qihoo-base-url}/api/account/getInfo

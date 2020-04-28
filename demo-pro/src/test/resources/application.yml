@@ -1,0 +1,17 @@
+spring:
+  mail:
+    default-encoding: Big5
+    smtp:
+      auth: true
+      port: 465
+      timeout: 5000
+    transport:
+      protocol: smtp
+    send:
+      charset: UTF-8
+    is:
+      ssl: true
+    host: smtp.163.com
+    auth:
+      name: xx@163.com
+      password :
