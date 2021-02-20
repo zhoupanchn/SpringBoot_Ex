@@ -30,12 +30,12 @@
     var files = [];
     layui.use('upload', function () {
         var $ = layui.jquery
-                , upload = layui.upload;
+            , upload = layui.upload;
 
 
         //多文件列表示例
         var demoListView = $('#demoList')
-                , uploadListIns = upload.render({
+            , uploadListIns = upload.render({
             elem: '#testList'
             , url: '/file/uploads?cate=company'
             //  ,size: 60 //限制文件大小，单位 KB
@@ -85,7 +85,7 @@
 
                     var fileUrl = res.fileUrl;
                     var tr = demoListView.find('tr#upload-' + index)
-                            , tds = tr.children();
+                        , tds = tr.children();
                     tds.eq(2).html('<span style="color: #5FB878;">上传成功</span>');
                     tds.eq(3).html('<span>' + fileUrl + '</span>');
                     tds.eq(4).html(''); //清空操作
@@ -95,7 +95,7 @@
             }
             , error: function (index, upload) {
                 var tr = demoListView.find('tr#upload-' + index)
-                        , tds = tr.children();
+                    , tds = tr.children();
                 tds.eq(2).html('<span style="color: #FF5722;">上传失败</span>');
                 tds.eq(3).find('.demo-reload').removeClass('layui-hide'); //显示重传
             }

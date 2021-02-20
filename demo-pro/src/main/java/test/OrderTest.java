@@ -37,7 +37,7 @@ public class OrderTest {
         userSet.addAll(orders1);
         System.out.println(userSet);*/
 
-        for(Order order:orders2){
+        for (Order order : orders2) {
             List<Order> collect = orders2.stream().filter(Order -> order.getOrderCode().equals(order.getOrderCode())).collect(Collectors.toList());
         }
 
@@ -63,12 +63,12 @@ public class OrderTest {
             System.out.println(m.getKey() + "：" + m.getValue());
         }*/
 
-        HashMap<String,String> hashMap=new HashMap<>();
-        hashMap.put("1","3");
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("1", "3");
         Iterator<Map.Entry<String, String>> iterator = hashMap.entrySet().iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Map.Entry<String, String> next = iterator.next();
-            System.out.println(next.getKey()+":"+next.getValue());
+            System.out.println(next.getKey() + ":" + next.getValue());
         }
     }
 }

@@ -23,7 +23,7 @@ public class ClassDemo {
         String s=br.readLine();
         System.out.println(s);*/
 
-        for(int i=0;i<=10;i++)
+        for (int i = 0; i <= 10; i++)
             System.out.println(i);
     }
 }

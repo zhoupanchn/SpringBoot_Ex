@@ -38,17 +38,17 @@ public class DateDemo {
         //获取前月的第一天
         Calendar c = Calendar.getInstance();
         c.add(Calendar.MONTH, 0);
-        c.set(Calendar.DAY_OF_MONTH,1);//设置为1号,当前日期既为本月第一天
-        c.set(Calendar.HOUR_OF_DAY,0);
+        c.set(Calendar.DAY_OF_MONTH, 1);//设置为1号,当前日期既为本月第一天
+        c.set(Calendar.HOUR_OF_DAY, 0);
         c.set(Calendar.MINUTE, 0);//将秒至0
-        c.set(Calendar.SECOND,0);//将毫秒至0
+        c.set(Calendar.SECOND, 0);//将毫秒至0
         c.set(Calendar.MILLISECOND, 0);
-        System.out.println("===============first:"+c.getTime());
+        System.out.println("===============first:" + c.getTime());
     }
 
     private static long getDueTime(Date date) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy年MM月dd日");
-        Calendar cal = Calendar.getInstance();
+        Calendar         cal        = Calendar.getInstance();
         cal.setTime(date);
         cal.add(Calendar.DAY_OF_YEAR, 30);
         System.out.println(cal.getTimeInMillis());

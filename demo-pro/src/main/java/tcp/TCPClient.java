@@ -11,8 +11,8 @@ public class TCPClient {
     public static void main(String[] args) throws IOException {
         System.out.println("socket tcp客户端启动。。。。");
         //创建Socket客户端
-        Socket       socket       =new Socket("127.0.0.1",8080);
-        OutputStream outputStream =socket.getOutputStream();
+        Socket       socket       = new Socket("127.0.0.1", 8080);
+        OutputStream outputStream = socket.getOutputStream();
         outputStream.write("我是客户端001。。。".getBytes());
         socket.close();
     }

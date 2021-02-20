@@ -14,4 +14,4 @@ spring:
     host: smtp.163.com
     auth:
       name: xx@163.com
-      password :
+      password:

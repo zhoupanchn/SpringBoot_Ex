@@ -51,7 +51,7 @@ public class JsonDemo {
         String jsonString = JSONObject.toJSONString(goodsDemoList);
         System.out.println(jsonString);
         List<GoodsDemo> objects = JSONObject.parseArray(jsonString, GoodsDemo.class);
-        for(GoodsDemo g:objects){
+        for (GoodsDemo g : objects) {
             System.out.println(g.getGoodsCode());
         }
     }

@@ -1,5 +1,5 @@
 public class BBB implements AAA {
-    public void p(){
+    public void p() {
         System.out.println("BBBB");
     }
 

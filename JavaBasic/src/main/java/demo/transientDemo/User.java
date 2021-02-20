@@ -9,7 +9,7 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 2153138274140160909L;
 
-    private String userName;
+    private           String  userName;
     private transient Integer age;
 
     public String getUserName() {

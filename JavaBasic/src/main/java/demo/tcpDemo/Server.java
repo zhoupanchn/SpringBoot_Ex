@@ -21,7 +21,7 @@ public class Server {
             InputStream inputStream = client.getInputStream();
             byte[]      bytes       = new byte[1024];
             int         read        = inputStream.read(bytes);
-            System.out.println(new String(bytes,0,read));
+            System.out.println(new String(bytes, 0, read));
             /*PrintStream out = new PrintStream(client.getOutputStream());
             out.println(data);
             out.close();*/

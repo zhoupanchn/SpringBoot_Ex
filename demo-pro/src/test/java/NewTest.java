@@ -13,7 +13,7 @@ import java.util.Date;
  */
 @Component
 @EnableScheduling
-public class NewTest  implements SchedulingConfigurer {
+public class NewTest implements SchedulingConfigurer {
 
     public static String cron;
 
@@ -32,9 +32,10 @@ public class NewTest  implements SchedulingConfigurer {
                 }
                 //修改为：每10秒执行一次.
                 cron = "0/10 * * * * *";
-                System.err.println("cron change to:"+cron);
+                System.err.println("cron change to:" + cron);
             }
-        }).start();;
+        }).start();
+        ;
     }
 
     @Override
@@ -43,7 +44,7 @@ public class NewTest  implements SchedulingConfigurer {
             @Override
             public void run() {
                 //任务逻辑代码部分.
-                System.out.println("TaskCronChange task is running ... "+ new Date());
+                System.out.println("TaskCronChange task is running ... " + new Date());
             }
         };
         Trigger trigger = new Trigger() {

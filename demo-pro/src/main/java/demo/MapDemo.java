@@ -7,18 +7,18 @@ import java.util.*;
  */
 public class MapDemo {
     public static void main(String[] args) {
-        Map<String,String> map =new HashMap<>();
-        map.put("1","1");
-        map.put("tj","2");
-        map.put("k","r");
-        map.put("4","4");
+        Map<String, String> map = new HashMap<>();
+        map.put("1", "1");
+        map.put("tj", "2");
+        map.put("k", "r");
+        map.put("4", "4");
         Set<String>  strings = map.keySet();
         List<String> result  = new ArrayList<>(strings);
-        for(String s:result){
+        for (String s : result) {
             System.out.println(s);
         }
-        List<String> valueList=new ArrayList<>(map.values());
-        for (String s:valueList){
+        List<String> valueList = new ArrayList<>(map.values());
+        for (String s : valueList) {
             System.out.println(s);
         }
     }

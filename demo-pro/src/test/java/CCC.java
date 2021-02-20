@@ -52,25 +52,25 @@ public class CCC {
         /*for (int d = 0; d < divs.size(); d++) {
             if (divs.get(d).text() != null && !"".equals(divs.get(d).text())) {
                 Element  elements = divs.get(d);*/
-                Elements trs      = header.select("tbody").get(2).select("tr[align=center]").nextAll();
-                for (int t = 0; t < trs.size(); t++) {
-                    Elements tdEs = trs.get(t).select("td");
-                    if (!tdEs.get(0).text().equals("") || tdEs.get(0).text() == null) {
-                        //System.out.println("==============" + tdEs.get(1).text());
-                    }
-                }
-                Element bottom = header.select("tbody").get(3);
-                //金额
-                String div1 = bottom.select("div").get(0).text();
-                String div2 = bottom.select("div").get(1).text();
-                String div3 = bottom.select("div").get(2).text();
-                //人
-                Elements selectTr = header.select("tbody").get(3).select("tr");
-                Elements tds      = selectTr.get(selectTr.size() - 1).select("td");
+        Elements trs = header.select("tbody").get(2).select("tr[align=center]").nextAll();
+        for (int t = 0; t < trs.size(); t++) {
+            Elements tdEs = trs.get(t).select("td");
+            if (!tdEs.get(0).text().equals("") || tdEs.get(0).text() == null) {
+                //System.out.println("==============" + tdEs.get(1).text());
+            }
+        }
+        Element bottom = header.select("tbody").get(3);
+        //金额
+        String div1 = bottom.select("div").get(0).text();
+        String div2 = bottom.select("div").get(1).text();
+        String div3 = bottom.select("div").get(2).text();
+        //人
+        Elements selectTr = header.select("tbody").get(3).select("tr");
+        Elements tds      = selectTr.get(selectTr.size() - 1).select("td");
         System.out.println(tds);
-                String   text     = tds.get(0).text();
-                String   text1    = tds.get(1).text();
-                String   text2    = tds.get(2).text();
+        String text  = tds.get(0).text();
+        String text1 = tds.get(1).text();
+        String text2 = tds.get(2).text();
                /* System.out.println(text);
                 System.out.println(text1);
                 System.out.println(text2);*/

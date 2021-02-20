@@ -18,26 +18,26 @@ public class TCPServer {
         //接受客户端请求 阻塞功能
 
         ExecutorService executorService = Executors.newCachedThreadPool();
-        try{
-            while(true){
-                Socket socket =serverSocket.accept();
+        try {
+            while (true) {
+                Socket socket = serverSocket.accept();
                 executorService.execute(new Runnable() {
                     @Override
                     public void run() {
                         try {
                             InputStream inputStream = socket.getInputStream();
 
-                            byte[] bytes=new byte[1024];
-                            int len=inputStream.read(bytes);
-                            String result=new String(bytes,0,len);
-                            System.out.println("服务器端接受的内容:"+result);
+                            byte[] bytes  = new byte[1024];
+                            int    len    = inputStream.read(bytes);
+                            String result = new String(bytes, 0, len);
+                            System.out.println("服务器端接受的内容:" + result);
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                     }
                 });
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             serverSocket.close();

@@ -14,7 +14,7 @@ public class BigDecimalDemo {
         BigDecimal decimal2 = b2.multiply(new BigDecimal(i.toString())).setScale(2, BigDecimal.ROUND_HALF_DOWN);
         BigDecimal decimal  = decimal1.add(decimal2).setScale(2, BigDecimal.ROUND_HALF_DOWN);
         System.out.println(decimal);*/
-        long l=30 * 24 * 60 * 60L;
+        long l = 30 * 24 * 60 * 60L;
         System.out.println(l);
     }
 }

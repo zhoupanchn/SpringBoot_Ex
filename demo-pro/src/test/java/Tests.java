@@ -60,7 +60,7 @@ public class Tests {
         for (String str : strings) {
             System.out.println(str);
         }*/
-        List<Object> list=new LinkedList<>();
+        List<Object> list = new LinkedList<>();
         Map<String, String> map = new TreeMap<String, String>(
                 new Comparator<String>() {
                     public int compare(String obj1, String obj2) {
@@ -75,12 +75,12 @@ public class Tests {
         map.put("sync", "5");
         map.put("tamp", "6");
         Iterator<String> values = map.values().iterator();
-        while (values.hasNext()){
+        while (values.hasNext()) {
             String next = values.next();
             System.out.println(next);
             list.add(next);
         }
-        Object[] obj=list.toArray();
+        Object[] obj = list.toArray();
         System.out.println(Arrays.toString(obj));
         /*Set<String>      keySet = map.keySet();
         Iterator<String> iter   = keySet.iterator();
@@ -93,18 +93,18 @@ public class Tests {
             System.out.println(l);
         }*/
 
-        String[] string = {"1", "2"};
-        String[] strings = {"Hello", "World","Beijing"};
-        LinkedList<String> linkedList= new LinkedList<>();
+        String[]           string     = {"1", "2"};
+        String[]           strings    = {"Hello", "World", "Beijing"};
+        LinkedList<String> linkedList = new LinkedList<>();
         linkedList.add("halgh");
         linkedList.add("Hello");
         linkedList.add("World");
         linkedList.add("Beijing");
         Object[] objects = linkedList.toArray();
-        String join = StringUtils.join(string,"_")+StringUtils.join(strings,"_");
+        String   join    = StringUtils.join(string, "_") + StringUtils.join(strings, "_");
         System.out.println(join);
 
-        String   s  = DigestUtils.shaHex(join);
+        String s = DigestUtils.shaHex(join);
         System.out.println(s.toUpperCase());
         System.out.println(Arrays.toString(objects));
     }

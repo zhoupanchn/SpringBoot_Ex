@@ -37,7 +37,7 @@ public class ListDemo {
             }
         }
         System.out.println("通过迭代器移除后的list元素：" + list.toString());*/
-        String str="1234567";
+        String str = "1234567";
         System.out.println(reverse(str));
     }
 

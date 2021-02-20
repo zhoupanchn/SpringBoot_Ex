@@ -81,8 +81,8 @@ public class LambdaTest {
 
     @Test
     public void ageSort5() {
-        String[] strings = new String[]{"Ahg","Dhig","Ckhia","bksg","ahg"};
-        Collections.sort(Arrays.asList(strings),String.CASE_INSENSITIVE_ORDER);
+        String[] strings = new String[]{"Ahg", "Dhig", "Ckhia", "bksg", "ahg"};
+        Collections.sort(Arrays.asList(strings), String.CASE_INSENSITIVE_ORDER);
         /*Arrays.sort(strings, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
